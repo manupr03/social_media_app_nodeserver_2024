@@ -1,0 +1,10 @@
+get http://localhost:5000/api/users
+
+###
+post http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name":"manu",
+    "description":"coder"
+}

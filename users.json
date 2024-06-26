@@ -43,6 +43,22 @@
       "mobile": 88888888888,
       "password": "123",
       "confirm_password": "123"
+    },
+    {
+      "firstname": "Fab",
+      "lastname": "tt",
+      "email": "fab@yopmail.com",
+      "mobile": 8967546789,
+      "password": "Password*123",
+      "confirm_password": "Password*123"
+    },
+    {
+      "firstname": "Fab",
+      "lastname": "TT",
+      "email": "Fab@yopmail.com",
+      "mobile": 123,
+      "password": "123",
+      "confirm_password": "123"
     }
   ]
 }

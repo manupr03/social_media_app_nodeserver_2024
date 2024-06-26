@@ -52,8 +52,9 @@ const addUser = (req,res)=>{
 }
 
 const loginUser = async (req,res)=>{
-    const {email,password} = req.body
 
+    const {email,password} = req.body
+    console.log('loginUser',email,password)
     try{
         readDB((err,db)=>{
             if(err){
@@ -137,12 +138,58 @@ const registerUser = (req,res)=>{
     })
 }
 
+const updateUser = (req,res)=>{
+    readDB((err,db)=>{
+        if(err){
+            return res.status(500).json({message:"Database connection error"});
+        }else{
+            const index = db.users.findIndex(u=>u.id === parseInt(req.params.id));
+            if(index !==-1){
+                db.users[index] = {...db.users[index],...req.body}
+                writeDB(db,(err)=>{
+                    if(err){
+                        return res.status(500).json({message:"Database connection error"})
+                    }
+
+                    return res.status(200).json({message:"User updated successfully",data:db.users[index]})
+                })
+            }
+        }
+    })
+}
+
+// const deleteUser = (req,res)=>{
+//     console.log('deleteUser',req.body)
+//     readDB((err,db)=>{
+//         if(err){
+//             return res.status(500).json({message:"Database connection error!"});
+//         }else{
+//             const index = db.users.findIndex(u=>u.id===parseInt(req.params.id));
+
+//             if(index !== -1){
+//                 db.users.splice(index,1);
+//                 writeDB(db,(err)=>{
+//                     if(err){
+//                         return res.status(500).json({message:"Database connection error"})
+//                     }
+//                     return res.status(200).json({message:"User deleted successfully"})
+//                 })
+
+//             }else{
+//                 return res.status(400).json({message:"User not found"})
+//             }
+//         }
+//     })
+// }
+
 
 
 module.exports = {
     getUsers,
     addUser,
     loginUser,
-    registerUser
+    registerUser,
+    updateUser,
+    // deleteUser
 }
 

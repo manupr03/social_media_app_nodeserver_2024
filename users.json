@@ -1,61 +1,10 @@
 {
   "users": [
     {
-      "name": "max",
-      "description": "coder1"
-    },
-    {
-      "name": "manu",
-      "description": "coder"
-    },
-    {
-      "name": "manu",
-      "description": "coder"
-    },
-    {
-      "email": "eeeeeeee",
-      "password": "ppppppppppp"
-    },
-    {
-      "name": "manu",
-      "description": "coder"
-    },
-    {
+      "user_id": 1,
       "firstname": "max",
       "lastname": "tt",
       "email": "max@yopmail.com",
-      "mobile": 7865785678,
-      "password": "Password*123",
-      "confirm_password": "Password*123"
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "confirm_password": ""
-    },
-    {
-      "firstname": "aaaaaa",
-      "lastname": "aaaaaaaaaa",
-      "email": "aaa@yopmail.com",
-      "mobile": 88888888888,
-      "password": "123",
-      "confirm_password": "123"
-    },
-    {
-      "firstname": "Fab",
-      "lastname": "tt",
-      "email": "fab@yopmail.com",
-      "mobile": 8967546789,
-      "password": "Password*123",
-      "confirm_password": "Password*123"
-    },
-    {
-      "firstname": "Fab",
-      "lastname": "TT",
-      "email": "Fab@yopmail.com",
       "mobile": 123,
       "password": "123",
       "confirm_password": "123"
